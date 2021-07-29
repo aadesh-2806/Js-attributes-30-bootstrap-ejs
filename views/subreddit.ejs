@@ -1,0 +1,17 @@
+<!-- can use above header other side to differentiate or partial and can use -->
+<!-- helpful because if we need to change c bootstrap than can do it by just changing there and not every time in home or rand etc -->
+<%- include('partials') %>
+<body>
+    <!-- if like we wasnt to add navbar we made -->
+    <!-- suppose we have file navbar.ejs -->
+    <%- include('navbar') %>
+    <h1><%= subreddit %></h1>
+    <h2><% description %></h2>
+    <h3><% subscribers %></h3>
+    <% for(let post of posts){ %>
+        <article>
+            <h3><%= post.title %></h3>
+        </article>
+    <% } %>
+</body>
+</html>
